@@ -6,4 +6,4 @@ Functionalities:
 * Search persons.
 * Save movies/persons to the local SQLITE database.
 * Remove movies/persons from the local SQLITE database.
-* Rate a movie.
+* Rating a movie.
