@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="es.upm.miw.tmdb.manager">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/themoviedb_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="es.upm.miw.tmdb.manager.activities.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="es.upm.miw.tmdb.manager.activities.InfoMovieActivity" />
+        <activity android:name="es.upm.miw.tmdb.manager.activities.PersonsActivity" />
+        <activity android:name="es.upm.miw.tmdb.manager.activities.InfoPersonActivity" />
+        <activity android:name="es.upm.miw.tmdb.manager.activities.MoviesActivity" />
+
+        <provider
+            android:name="es.upm.miw.tmdb.manager.services.movies.MoviesProvider"
+            android:authorities="es.upm.miw.tmdb.manager.services.movies.movie.provider"
+            android:exported="true" />
+        <provider
+            android:name="es.upm.miw.tmdb.manager.services.persons.PersonsProvider"
+            android:authorities="es.upm.miw.tmdb.manager.services.persons.provider"
+            android:exported="true" />
+        <provider
+            android:name="es.upm.miw.tmdb.manager.services.movies.CastProvider"
+            android:authorities="es.upm.miw.tmdb.manager.services.movies.cast.provider"
+            android:exported="true" />
+        <provider
+            android:name="es.upm.miw.tmdb.manager.services.persons.KnownForProvider"
+            android:authorities="es.upm.miw.tmdb.manager.services.persons.knownfor.provider"
+            android:exported="true" />
+    </application>
+
+</manifest>
